@@ -1,7 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
-import Navbar from 'react-bootstrap/Navbar';
+import Header from './shared/Header/Header';
+import Footer from './shared/Footer/Footer';
 
 const setup = () => {
     return shallow(<App />);
@@ -10,18 +11,14 @@ const setup = () => {
 test('renders without crashing', () => {
   
 });
-test ('contains `Navbar` element', () => {
+test ('contains `Header` element', () => {
     const wrapper = setup();
-    const navbar = wrapper.find(Navbar);
-    expect (navbar.length).toBe(1);
+    const hdr = wrapper.find(Header);
+    expect (hdr.length).toBe(1);
 })
-test ('contains `Navbar.Brand` component', () => {
+test ('contains `Footer` element', () => {
     const wrapper = setup();
-    const nav_brand = wrapper.find(Navbar.Brand);
-    expect (nav_brand.length).toBe(1);
+    const ftr = wrapper.find(Footer);
+    expect (ftr.length).toBe(1);
 })
-test ('Navbar.Brand has text `Classroom`', () => {
-    const wrapper = setup();
-    const nav_brand = wrapper.find(Navbar.Brand);
-    expect (nav_brand.text()).toContain("Classroom");
-})
+

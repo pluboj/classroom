@@ -1,0 +1,10 @@
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: auto;
+}
+.form-label {
+    width: 100% !important;
+    text-align: left !important;
+}
