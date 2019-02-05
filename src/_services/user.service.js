@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import config from 'config';
 import { authHeader } from '../_helpers';
 
@@ -68,6 +69,7 @@ function update(user) {
         body: JSON.stringify(user)
     };
 
+    // eslint-disable-next-line no-unreachable
     return fetch(`${config.apiUrl}/users/${user.id}`, requestOptions).then(handleResponse);;
 }
 

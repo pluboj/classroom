@@ -8,3 +8,7 @@
     width: 100% !important;
     text-align: left !important;
 }
+.lbl-error {
+    color: red;
+    text-align: left;
+}

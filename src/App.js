@@ -10,9 +10,9 @@ import { PrivateRoute } from './components/PrivateRoute';
 import Header from './shared/Header/Header';
 import Footer from './shared/Footer/Footer';
 import Content from './shared/Content/Content';
-import Login from './components/Login';
-import HomePage from './components/Home';
-import RegisterPage from './components/Register';
+import { Login } from './components/Login';
+import { HomePage } from './components/Home';
+import { RegisterPage } from './components/Register';
 
 // FontAwesome
 import { library } from '@fortawesome/fontawesome-svg-core';
