@@ -1,0 +1,24 @@
+.Student {
+    width: 12rem;
+}
+
+.Student tr {
+    font-size: 0.8em;
+}
+
+.Student table {
+    margin-bottom: 0 !important;
+}
+
+.Student table th {
+    text-align: left;
+}
+
+.header {
+    text-align: left;
+    font-weight: bold;
+}
+
+.edit {
+    text-align: right;
+}

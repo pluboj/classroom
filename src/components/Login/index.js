@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { userActions } from '../../_actions';
 import './index.css';
@@ -83,7 +84,7 @@ class Login extends Component {
                     Sign in
                 </Button>
                 {loggingIn &&
-                    <img src="someImageHere" alt="whateverImage" />}
+                    <FontAwesomeIcon icon={['far', 'hourglass']} />}
                 <Link to="/register" className="btn btn-link">Register</Link>
             </Form>
         )

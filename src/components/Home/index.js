@@ -1,24 +1,21 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import Subbar from '../../shared/Subbar/Subbar';
+import Studentlist from '../Student/Studentlist';
 
 import { userActions } from '../../_actions';
 
 class HomePage extends Component {
     componentDidMount() {
         this.props.dispatch(userActions.getAll());
-}
+    }
 
     render () {
         const { user } = this.props;
         return (
             <div>
-                <p>
-                    Hi {user.firstName}!
-                </p>
-                <p>
-                    <Link to="/login">Logout</Link>
-                </p>
+                <Subbar userName={user.firstName}/>
+                <Studentlist></Studentlist>
             </div>
         );
     }
