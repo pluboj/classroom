@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Student = props => (
     <Card 
-        border="primary"    
+        border={props.border}    
         className="Student"
         data-test="card-student"
     >
@@ -15,11 +15,11 @@ const Student = props => (
         <Table>
             <tr>
                 <th>ID</th>
-                <td>12345678</td>
+                <td>{props.studentId}</td>
             </tr>
             <tr>
                 <th>DOB</th>
-                <td>10/21/2009</td>
+                <td>{props.studentDOB}</td>
             </tr>
             <tr>
                 <td colSpan={2} className="edit">
