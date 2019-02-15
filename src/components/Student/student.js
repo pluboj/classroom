@@ -11,8 +11,14 @@ const Student = props => (
         className="Student"
         data-test="card-student"
     >
-        <Card.Header className="header">{props.studentName}</Card.Header>
+        <Card.Header 
+            className="header" 
+            style={{backgroundColor : props.border === 'primary' ? 'lightblue' : 'lightcoral'}}
+        >
+            {props.studentName}
+        </Card.Header>
         <Table>
+            <tbody>
             <tr>
                 <th>ID</th>
                 <td>{props.studentId}</td>
@@ -30,6 +36,7 @@ const Student = props => (
                     </Card.Link>
                 </td>
             </tr>
+            </tbody>
         </Table>
     </Card>
 )

@@ -28,36 +28,6 @@ const data = [
         studentDOB : '02/02/2015',
         studentGender : 'M'
     },
-    {
-        studentId : 11122233,
-        studentName : 'Richard Crown',
-        studentDOB : '12/08/2015',
-        studentGender : 'M'
-    },
-    {
-        studentId : 10005600,
-        studentName : 'Rebeca Bower',
-        studentDOB : '06/01/2015',
-        studentGender : 'F'
-    },
-    {
-        studentId : 12345678,
-        studentName : 'Martin Smith',
-        studentDOB : '02/02/2015',
-        studentGender : 'M'
-    },
-    {
-        studentId : 11122233,
-        studentName : 'Richard Crown',
-        studentDOB : '12/08/2015',
-        studentGender : 'M'
-    },
-    {
-        studentId : 10005600,
-        studentName : 'Rebeca Bower',
-        studentDOB : '06/01/2015',
-        studentGender : 'F'
-    },
 ];
 
 class Studentlist extends Component {
@@ -79,6 +49,7 @@ class Studentlist extends Component {
             let student = this.state.students[n];
             row.push(
                 <Student 
+                    key={'st-'+n}
                     border={`${student.studentGender === 'M' ? 'primary' : 'danger'}`}
                     studentId={student.studentId}
                     studentDOB={student.studentDOB}
@@ -86,7 +57,7 @@ class Studentlist extends Component {
                 />
             )
             if ((n + 1) % 8 === 0 || n === this.state.students.length - 1) {
-                studentList.push(<Row>{row}</Row>);
+                studentList.push(<Row key={'row-'+n}>{row}</Row>);
                 row = [];
             } 
             n++;
