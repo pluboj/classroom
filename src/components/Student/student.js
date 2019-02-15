@@ -11,7 +11,7 @@ const Student = props => (
         className="Student"
         data-test="card-student"
     >
-        <Card.Header className="header">Joe Test</Card.Header>
+        <Card.Header className="header">{props.studentName}</Card.Header>
         <Table>
             <tr>
                 <th>ID</th>
