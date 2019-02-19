@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
+import Moment from 'react-moment';
 
 import './student.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -25,7 +26,7 @@ const Student = props => (
             </tr>
             <tr>
                 <th>DOB</th>
-                <td>{props.studentDOB}</td>
+                <td><Moment format="MMM D YYYY">{props.studentDOB}</Moment></td>
             </tr>
             <tr>
                 <td colSpan={2} className="edit">
