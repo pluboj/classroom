@@ -1,0 +1,110 @@
+[
+    {
+        "studentId" : 12345678,
+        "studentName" : "Yusef Humphrey",
+        "studentDOB" : "9/3/2009",
+        "studentGender" : "M"
+    },
+    {
+        "studentId" : 10045678,
+        "studentName" : "Rayyan Bull",
+        "studentDOB" : "9/10/2009",
+        "studentGender" : "M"
+    },
+    {
+        "studentId" : 30000156,
+        "studentName" : "Arisha Strong",
+        "studentDOB" : "8/13/2010",
+        "studentGender" : "F"
+    },
+    {
+        "studentId" : 96877955,
+        "studentName" : "Jack Wilde",
+        "studentDOB" : "8/11/2010",
+        "studentGender" : "M"
+    },
+    {
+        "studentId" : 21360232,
+        "studentName" : "Kelly Field",
+        "studentDOB" : "11/3/2009",
+        "studentGender" : "F"
+    },
+    {
+        "studentId" : 29568948,
+        "studentName" : "Cathy Burke",
+        "studentDOB" : "7/16/2010",
+        "studentGender" : "F"
+    },
+    {
+        "studentId" : 36909044,
+        "studentName" : "Jonny Portillo",
+        "studentDOB" : "11/22/2009",
+        "studentGender" : "M"
+    },
+    {
+        "studentId" : 73848119,
+        "studentName" : "Ibrar Truong",
+        "studentDOB" : "12/17/2009",
+        "studentGender" : "M"
+    },
+    {
+        "studentId" : 96081237,
+        "studentName" : "Caden Wainwright",
+        "studentDOB" : "6/6/2010",
+        "studentGender" : "M"
+    },
+    {
+        "studentId" : 96329174,
+        "studentName" : "Darnell Humphrey",
+        "studentDOB" : "4/17/2010",
+        "studentGender" : "F"
+    },
+    {
+        "studentId" : 77717702,
+        "studentName" : "Aayat England",
+        "studentDOB" : "12/24/2009",
+        "studentGender" : "F"
+    },
+    {
+        "studentId" : 77700460,
+        "studentName" : "Keri Herring",
+        "studentDOB" : "2/11/2010",
+        "studentGender" : "F"
+    },
+    {
+        "studentId" : 35037299,
+        "studentName" : "Shakir Mcdonnell",
+        "studentDOB" : "3/18/2010",
+        "studentGender" : "M"
+    },
+    {
+        "studentId" : 65369607,
+        "studentName" : "Sebastien Flores",
+        "studentDOB" : "1/9/2010",
+        "studentGender" : "M"
+    },
+    {
+        "studentId" : 50780806,
+        "studentName" : "Mysha Searle",
+        "studentDOB" : "2/11/2010",
+        "studentGender" : "F"
+    },
+    {
+        "studentId" : 10766857,
+        "studentName" : "Lani Villegas",
+        "studentDOB" : "2/21/2010",
+        "studentGender" : "F"
+    },
+    {
+        "studentId" : 26627296,
+        "studentName" : "Ray Finnegan",
+        "studentDOB" : "4/12/2010",
+        "studentGender" : "M"
+    },
+    {
+        "studentId" : 27589045,
+        "studentName" : "Sofia Henderson",
+        "studentDOB" : "11/3/2009",
+        "studentGender" : "F"
+    }
+]

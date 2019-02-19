@@ -1,34 +1,8 @@
 import React, { Component } from 'react';
 import Student from './student';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import Row from 'react-bootstrap/Row'
-
-const data = [
-    {
-        studentId : 12345678,
-        studentName : 'Martin Smith',
-        studentDOB : '02/02/2015',
-        studentGender : 'M'
-    },
-    {
-        studentId : 11122233,
-        studentName : 'Richard Crown',
-        studentDOB : '12/08/2015',
-        studentGender : 'M'
-    },
-    {
-        studentId : 10005600,
-        studentName : 'Rebeca Bower',
-        studentDOB : '06/01/2015',
-        studentGender : 'F'
-    },
-    {
-        studentId : 12345678,
-        studentName : 'Martin Smith',
-        studentDOB : '02/02/2015',
-        studentGender : 'M'
-    },
-];
+import Row from 'react-bootstrap/Row';
+import students from '../../data/data-students.json';
 
 class Studentlist extends Component {
     state = {
@@ -37,7 +11,7 @@ class Studentlist extends Component {
 
     componentDidMount() {
         this.setState({
-            students : data
+            students : students
         });
     }
 
