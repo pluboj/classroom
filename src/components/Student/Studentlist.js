@@ -4,7 +4,9 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 
+import './studentlist.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Background from '../../images/classroom-lg.jpg';
 import students from '../../data/data-students.json';
 
 class Studentlist extends Component {
@@ -43,8 +45,11 @@ class Studentlist extends Component {
     }
 
     render () {
+        const listStyle = {
+            backgroundImage: `url(${Background})`,
+        }
         return (
-            <Jumbotron>
+            <Jumbotron style={listStyle} className="panel">
                {this.buildLayout()}
                <Button variant="secondary" size="lg">
                     <FontAwesomeIcon icon={['far', 'plus-square']} /> Add student
