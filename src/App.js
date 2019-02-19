@@ -16,9 +16,9 @@ import { RegisterPage } from './components/Register';
 
 // FontAwesome
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCopyright, faHourglass, faEdit } from '@fortawesome/free-regular-svg-icons';
+import { faCopyright, faHourglass, faEdit, faPlusSquare } from '@fortawesome/free-regular-svg-icons';
 
-library.add(faCopyright, faHourglass, faEdit);
+library.add(faCopyright, faHourglass, faEdit, faPlusSquare);
 
 class App extends Component {
   constructor(props) {

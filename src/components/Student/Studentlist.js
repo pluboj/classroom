@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Student from './student';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import students from '../../data/data-students.json';
 
 class Studentlist extends Component {
@@ -15,7 +18,7 @@ class Studentlist extends Component {
         });
     }
 
-    buidLayout = () => {
+    buildLayout = () => {
         let studentList = [];
         let row = [];
         let n = 0;
@@ -42,7 +45,10 @@ class Studentlist extends Component {
     render () {
         return (
             <Jumbotron>
-               {this.buidLayout()}
+               {this.buildLayout()}
+               <Button variant="secondary" size="lg">
+                    <FontAwesomeIcon icon={['far', 'plus-square']} /> Add student
+               </Button>
             </Jumbotron>
         );
     }
