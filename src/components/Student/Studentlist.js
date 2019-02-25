@@ -3,6 +3,7 @@ import Student from './student';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 
 import './studentlist.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -50,10 +51,12 @@ class Studentlist extends Component {
         }
         return (
             <Jumbotron style={listStyle} className="panel">
-               {this.buildLayout()}
-               <Button variant="secondary" size="lg">
-                    <FontAwesomeIcon icon={['far', 'plus-square']} /> Add student
-               </Button>
+                {this.buildLayout()}
+                <Link to="/form">
+                    <Button variant="secondary" size="lg" style={{color: 'wheat'}}>
+                        <FontAwesomeIcon icon={['far', 'plus-square']} /> Add student
+                    </Button>
+                </Link>
             </Jumbotron>
         );
     }

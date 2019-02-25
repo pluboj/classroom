@@ -13,6 +13,7 @@ import Content from './shared/Content/Content';
 import { Login } from './components/Login';
 import { HomePage } from './components/Home';
 import { RegisterPage } from './components/Register';
+import StudentForm from './components/Student/StudentForm';
 
 // FontAwesome
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -41,6 +42,7 @@ class App extends Component {
         <Router history={history}>
           <Content>
             <PrivateRoute exact path="/" component={HomePage} />
+            <PrivateRoute exact path="/form" component={StudentForm} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={RegisterPage} />
           </Content>
