@@ -31,7 +31,7 @@ const Student = props => (
             <tr>
                 <td colSpan={2} className="edit">
                     <Card.Link 
-                        href="#"
+                        href="/form"
                     >
                         <FontAwesomeIcon icon={['far', 'edit']} size="lg" />
                     </Card.Link>

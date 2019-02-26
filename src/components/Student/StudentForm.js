@@ -83,7 +83,49 @@ class StudentForm extends Component {
                             </Col>
                         </Form.Group>
                     </fieldset>
-                    
+
+                    <Form.Row>
+                        <Form.Group id="formGridAllergiesCheckbox">
+                            <Col md={2}>
+                                <Form.Check type="checkbox" name="allergies" label="Allergies" />
+                            </Col>
+                        </Form.Group>
+                    </Form.Row>
+
+                    <Form.Row>
+                        <Form.Group id="formGridDisabilitiesCheckbox">
+                            <Col md={2}>
+                                <Form.Check type="checkbox" name="dasability" label="Disability" />
+                            </Col>
+                        </Form.Group>
+                    </Form.Row>
+                    <hr/>
+                    <h4>Parent / Guardian</h4>
+
+                    <Form.Row>
+                        <Form.Group as={Col} controlId="formGridParentFirstName">
+                            <Form.Label>First Name</Form.Label>
+                            <Form.Control type="text" name="firstNameParent" placeholder="First Name" />
+                        </Form.Group>
+
+                        <Form.Group as={Col} controlId="formGridParentLastName">
+                            <Form.Label>Last Name</Form.Label>
+                            <Form.Control type="text" name="lastNameParent" placeholder="Last Name" />
+                        </Form.Group>
+                    </Form.Row>
+
+                    <Form.Group controlId="formGridEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control type="email" placeholder="name@example.com" />
+                    </Form.Group>
+
+                    <Form.Row>
+                        <Form.Group as={Col} md={4} controlId="formGridPhone">
+                            <Form.Label>Phone Number</Form.Label>
+                            <Form.Control name="phone"/>
+                        </Form.Group>
+                    </Form.Row>
+
                     <hr/>
                     <Form.Row>
                         <Button as={Col} variant="secondary" size="lg" type="reset">
