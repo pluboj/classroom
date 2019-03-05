@@ -31,9 +31,7 @@ class Studentlist extends Component {
                 <Student 
                     key={'st-'+n}
                     border={`${student.studentGender === 'M' ? 'primary' : 'danger'}`}
-                    studentId={student.studentId}
-                    studentDOB={student.studentDOB}
-                    studentName={student.studentName}
+                    student={student}
                 />
             )
             if ((n + 1) % 8 === 0 || n === this.state.students.length - 1) {

@@ -16,22 +16,22 @@ const Student = props => (
             className="header" 
             style={{backgroundColor : props.border === 'primary' ? 'lightblue' : 'lightcoral'}}
         >
-            {props.studentName}
+            {props.student.studentFirstName} {props.student.studentLastName}
         </Card.Header>
         <Table>
             <tbody>
             <tr>
                 <th>ID</th>
-                <td>{props.studentId}</td>
+                <td>{props.student.studentId}</td>
             </tr>
             <tr>
                 <th>DOB</th>
-                <td><Moment format="MMM D YYYY">{props.studentDOB}</Moment></td>
+                <td><Moment format="MMM D YYYY">{props.student.studentDOB}</Moment></td>
             </tr>
             <tr>
                 <td colSpan={2} className="edit">
                     <Card.Link 
-                        href="/form"
+                        href={`/form/${props.student.studentId}`} 
                     >
                         <FontAwesomeIcon icon={['far', 'edit']} size="lg" />
                     </Card.Link>

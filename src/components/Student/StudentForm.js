@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import students from '../../data/data-students.json';
 
 const usStates = [
     'Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut',
@@ -11,6 +12,16 @@ const usStates = [
 ]
 
 class StudentForm extends Component {
+    state = {
+        student: {},
+    }
+    componentDidMount () {
+        const { id } = this.props.match.params;
+        if (id) {
+            const student = students.find( s => s.studentId === Number(id));
+            this.setState({ student: student });
+        } 
+    }
 
     render () {
         return (
@@ -21,19 +32,23 @@ class StudentForm extends Component {
                     <Form.Row>
                         <Form.Group as={Col}  md={4} controlId="formGridStudentId">
                             <Form.Label>Student ID</Form.Label>
-                            <Form.Control name="sid" placeholder="10000000" />
+                            <Form.Control name="sid" placeholder="10000000" value={this.state.student.studentId} />
                         </Form.Group>
                     </Form.Row>
                      <hr/>
                     <Form.Row>
                         <Form.Group as={Col} controlId="formGridFirstName">
                             <Form.Label>First Name</Form.Label>
-                            <Form.Control type="text" name="firstName" placeholder="First Name" />
+                            <Form.Control type="text" name="firstName" 
+                                placeholder="First Name" 
+                                value={this.state.student.studentFirstName} />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridLastName">
                             <Form.Label>Last Name</Form.Label>
-                            <Form.Control type="text" name="lastName" placeholder="Last Name" />
+                            <Form.Control type="text" name="lastName" 
+                                placeholder="Last Name" 
+                                value={this.state.student.studentLastName} />
                         </Form.Group>
                     </Form.Row>
 
@@ -71,15 +86,20 @@ class StudentForm extends Component {
                     <Form.Row>
                         <Form.Group as={Col}  md={4} controlId="formGridDOB">
                             <Form.Label>Date of Birth</Form.Label>
-                            <Form.Control name="dob" placeholder="01/01/2000" />
+                            <Form.Control name="dob" placeholder="01/01/2000"
+                                value={this.state.student.studentDOB} />
                         </Form.Group>
                     </Form.Row>
 
                     <fieldset>
                         <Form.Group as={Row}>
                             <Col md={2}>
-                                <Form.Check inline label="Male" name="studentGender" type="radio" id="male" />
-                                <Form.Check inline label="Female" name="studentGender" type="radio" id="female" />
+                                <Form.Check inline label="Male" name="studentGender" 
+                                    type="radio" id="male" value="m" 
+                                    checked={this.state.student.studentGender === "M"}/>
+                                <Form.Check inline label="Female" name="studentGender" 
+                                    type="radio" id="female" value="f"
+                                    checked={this.state.student.studentGender === "F"} />
                             </Col>
                         </Form.Group>
                     </fieldset>

@@ -42,6 +42,7 @@ class App extends Component {
         <Router history={history}>
           <Content>
             <PrivateRoute exact path="/" component={HomePage} />
+            <PrivateRoute exact path="/form/:id" component={StudentForm} />
             <PrivateRoute exact path="/form" component={StudentForm} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={RegisterPage} />
